@@ -88,7 +88,7 @@ let game = {
     game.checkForWin(game.keyPressArray, game.word);
     if (game.hasWon === true) {
       game.winElement.innerText = game.wins;
-      togglePlay();
+      playMusic();
       game.reset();
     }
   }
@@ -109,6 +109,7 @@ document.onkeypress = ((event) => {
     }
   } else {
     if (game.keyPressArray.length === 0) {
+      pauseMusic();
       game.gameFunction(keyPressed);
     } else if (game.keyPressArray.includes(keyPressed) === false) {
       game.gameFunction(keyPressed);
@@ -117,7 +118,17 @@ document.onkeypress = ((event) => {
 });
 
 // Play/Pause audio function
-function togglePlay() {
+const togglePlay = () => {
   let audioElement = document.getElementById('audio');
   return audioElement.paused ? audioElement.play() : audioElement.pause();
+};
+
+const pauseMusic = () => {
+  let audioElement = document.getElementById('audio');
+  return audioElement.pause();
+};
+
+const playMusic = () => {
+  let audioElement = document.getElementById('audio');
+  return audioElement.play();
 };

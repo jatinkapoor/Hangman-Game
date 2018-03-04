@@ -6,7 +6,7 @@
 }
 
 .img-dem {
-  height: 720px;
+  height: 740px;
   width: 100%;
 }
 
@@ -32,11 +32,11 @@
 
 .guessed-letters {
   font-family: Cheveuxdange;
-  letter-spacing: 8px;
+  letter-spacing: 6px;
   font-size: 23px;
   color: orange;
   font-style: italic;
-  margin-left: 523px;
+  margin-left: 480px;
   margin-top: 40px;
 }
 
@@ -44,7 +44,7 @@
 .wins {
   font-family: Cheveuxdange;
   margin-left: 76%;
-  margin-top: -120px;
+  margin-top: -140px;
   font-size: 35px;
   clear:both;
   overflow:hidden;
@@ -55,8 +55,8 @@
 
 .win-score {
   font-family: Cheveuxdange;
-  margin-left: 78%;
-  margin-top: -70px;
+  margin-left: 79%;
+  margin-top: -90px;
   font-size: 35px;
   clear: both;
   overflow: hidden;
@@ -101,7 +101,7 @@
 
 .stop {
   margin-left: 63%;
-  margin-top: -535px;
+  margin-top: 80px;
   position: absolute;
   float: right;
   opacity: 0.7;

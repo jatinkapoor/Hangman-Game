@@ -13,28 +13,29 @@
   <div>
     <div>
       <div>
+        <audio id="audio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
+        </audio>
+        <a onclick="togglePlay()">
+          <img class="stop" src="./assets/images/stop.png" alt="stop">
+        </a>
         <img class="img-dem" src="./assets/images/office.jpeg" alt="hangman">
         <h1 class="title">Hangman</h1>
         <p class="wins">Wins !!</p>
         <div id="wins" class="win-score">
         </div>
-        <p class="subtitle">Press any key to play !!</p>  
+        <p class="subtitle">Press any key to play !!</p>
         <div>
           <div class="letters" id="target"></div>
         </div>
         <br>
         <p class="guessed">Letters already guessed !!</p>
         <div class="guessed-letters" id="keyArray"></div>
-        <br><br>
+        <br>
+        <br>
         <p class="attempts">Attemps Left ?</p>
         <div class="attempt-num" id="attempts">
         </div>
       </div>
-      <audio id="audio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
-      </audio>
-      <a onclick="togglePlay()">
-          <img class="stop" src="./assets/images/stop.png" alt="stop">
-      </a>     
     </div>
   </div>
 
