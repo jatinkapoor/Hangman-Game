@@ -98,3 +98,15 @@
   font-style: italic;
   margin-left: 620px;
 }
+
+.stop {
+  margin-left: 63%;
+  margin-top: -535px;
+  position: absolute;
+  float: right;
+  opacity: 0.7;
+  width: 3%;
+}
+
+
+
