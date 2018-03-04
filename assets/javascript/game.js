@@ -1,5 +1,6 @@
 'use-strict'
 
+//Creating game object
 let game = {
   words: ['exciting', 'beautiful', 'became', 'eventful', 'actually',
     'overdone', 'prefect', 'crayers', 'behowl', 'tired', 'empathy', 'unsteeled'
@@ -12,6 +13,7 @@ let game = {
   wins: 0,
   hasWon: false,
   attempts: 10,
+  //Create a placeholder with blanks where letters will be placed
   createPlaceholderForWord: (word) => {
     let target = document.getElementById("target");
     while (target.firstChild) {
@@ -27,6 +29,7 @@ let game = {
     game.winElement.innerText = game.wins;
     game.attempsElement.innerText = game.attempts;
   },
+  //Replace placeholder spaces with actual letters
   replacePlaceHolderWithLetter: (word, keyPressed) => {
     if (word.includes(keyPressed)) {
       let arr = [];
@@ -44,6 +47,7 @@ let game = {
       game.attempsElement.innerText = game.attempts;
     }
   },
+  //Keep track of all the letters entered by the user
   keepTrackofLetterUsed: (keyPressed) => {
     game.keyPressArray.push(keyPressed);
     const keyPressLocation = game.keyPressLocation;
@@ -52,6 +56,7 @@ let game = {
     node.appendChild(textnode);
     keyPressLocation.appendChild(node);
   },
+  // Check if all letters have been guessed
   checkForWin: (keyPressArray, word) => {
     let wordArray = Array.from(word);
     let ret = wordArray.every((val) => keyPressArray.indexOf(val) >= 0);
@@ -61,6 +66,7 @@ let game = {
       game.hasWon = true;
     }
   },
+  // Reset the game after a win or loss
   reset: () => {
     game.hasWon = false;
     game.attempts = 10;
@@ -75,6 +81,7 @@ let game = {
     game.word = word;
     game.createPlaceholderForWord(game.word);
   },
+  // The main function which will control actions of the game
   gameFunction: (keyPressed) => {
     game.keepTrackofLetterUsed(keyPressed);
     game.replacePlaceHolderWithLetter(game.word, keyPressed);
@@ -90,6 +97,7 @@ let game = {
 game.word = game.words[Math.floor(Math.random() * game.words.length)];
 game.createPlaceholderForWord(game.word);
 
+// Key Press eventlistener
 document.onkeypress = ((event) => {
 
   let keyPressed = event.key.toLowerCase();
@@ -108,6 +116,7 @@ document.onkeypress = ((event) => {
   }
 });
 
+// Play/Pause audio function
 function togglePlay() {
   let audioElement = document.getElementById('audio');
   return audioElement.paused ? audioElement.play() : audioElement.pause();
