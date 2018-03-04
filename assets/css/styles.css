@@ -1,3 +1,100 @@
-/* body {
-  background-image: url("../images/bg-game.jpg");
-} */
+@font-face {
+  font-family: "Cheveuxdange";
+  src: url("../fonts/Cheveuxdange.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.img-dem {
+  height: 720px;
+  width: 100%;
+}
+
+.title {
+  font-family: Cheveuxdange;
+  width: 680px;
+  font-size: 73px;
+  margin-top: -620px;
+  margin-left: 36%;
+  color: orange;
+  font-style: italic;
+}
+
+.guessed {
+  font-family: Cheveuxdange;
+  width: 680px;
+  font-size: 23px;
+  color: #54524e;
+  font-style: italic;
+  margin-left: 523px;
+  margin-top: 40px;
+}
+
+.guessed-letters {
+  font-family: Cheveuxdange;
+  letter-spacing: 8px;
+  font-size: 23px;
+  color: orange;
+  font-style: italic;
+  margin-left: 523px;
+  margin-top: 40px;
+}
+
+
+.wins {
+  font-family: Cheveuxdange;
+  margin-left: 76%;
+  margin-top: -120px;
+  font-size: 35px;
+  clear:both;
+  overflow:hidden;
+  clear: both;
+  position: absolute;
+  color: aliceblue;
+}
+
+.win-score {
+  font-family: Cheveuxdange;
+  margin-left: 78%;
+  margin-top: -70px;
+  font-size: 35px;
+  clear: both;
+  overflow: hidden;
+  clear: both;
+  position: absolute;
+  color: aliceblue;
+}
+
+.subtitle {
+  font-family: Cheveuxdange;
+  color: #54524e;
+  font-style: italic;
+  margin-left: 527px;
+  font-size: 25px;
+}
+
+.letters {
+  font-family: Cheveuxdange;
+  margin-top: 40px;
+  margin-left: 40%;
+  font-size: 30px;
+  color: orange;
+}
+
+.attempts {
+  font-family: Cheveuxdange;
+  width: 680px;
+  font-size: 23px;
+  color: #54524e;
+  font-style: italic;
+  margin-left: 565px;
+}
+
+.attempt-num {
+  font-family: Cheveuxdange;
+  width: 680px;
+  font-size: 30px;
+  color: orange;
+  font-style: italic;
+  margin-left: 620px;
+}

@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Hangman</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-  crossorigin="anonymous">  
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body class="bg-light">
 
-  <div class="container">
-    <div class="row">
-          <div id="target" class="col-xl-10">
-            
-          </div>
+<body>
+  <div>
+    <div>
+      <div>
+        <img class="img-dem" src="./assets/images/office.jpeg" alt="hangman">
+        <h1 class="title">Hangman</h1>
+        <p class="wins">Wins !!</p>
+        <div id="wins" class="win-score">
+        </div>
+        <p class="subtitle">Press any key to play !!</p>  
+        <div>
+          <div class="letters" id="target"></div>
+        </div>
+        <br>
+        <p class="guessed">Letters already guessed !!</p>
+        <div class="guessed-letters" id="keyArray"></div>
+        <br><br>
+        <p class="attempts">Attemps Left ?</p>
+        <div class="attempt-num" id="attempts">
+        </div>
+      </div>
     </div>
-    <br><br><br><br>
-
-  <div class="row">
-    <div id="keyArray" class="col-xl-10">
-
-    </div>
-</div>
   </div>
-<script src="./assets/javascript/game.js"></script>
-</body>
-</html>
 
+  <script src="./assets/javascript/game.js"></script>
+</body>
+
+</html>
