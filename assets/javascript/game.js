@@ -73,7 +73,7 @@ let game = {
     while (game.keyPressArray.length !== 0) {
       game.keyPressArray.pop();
     }
-    let target = document.getElementById("keyArray");
+    let target = game.keyPressLocation;
     while (target.firstChild) {
       target.removeChild(target.firstChild);
     }
