@@ -6,7 +6,7 @@
 }
 
 .img-dem {
-  height: 740px;
+  height: 100%;
   width: 100%;
 }
 
@@ -14,7 +14,7 @@
   font-family: Cheveuxdange;
   width: 680px;
   font-size: 73px;
-  margin-top: -620px;
+  margin-top: -700px;
   margin-left: 36%;
   color: orange;
   font-style: italic;
@@ -43,8 +43,8 @@
 
 .wins {
   font-family: Cheveuxdange;
-  margin-left: 76%;
-  margin-top: -140px;
+  margin-left: 75%;
+  margin-top: 40px;
   font-size: 35px;
   clear:both;
   overflow:hidden;
@@ -55,8 +55,8 @@
 
 .win-score {
   font-family: Cheveuxdange;
-  margin-left: 79%;
-  margin-top: -90px;
+  margin-left: 78%;
+  margin-top: 100px;
   font-size: 35px;
   clear: both;
   overflow: hidden;
