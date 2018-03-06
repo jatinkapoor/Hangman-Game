@@ -3,27 +3,28 @@
 //Creating game object
 let game = {
   words: ['exciting', 'beautiful', 'became', 'eventful', 'actually',
-    'overdone', 'prefect', 'crayers', 'behowl', 'tired', 'empathy', 'unsteeled'
-  ],
+    'overdone', 'prefect', 'attractive', 'clean', 'tired', 'empathy', 'handsome',
+    'gorgeous', 'plain', 'quaint', 'fancy', 'salmon', 'mango', 'important', 'tender',
+    'helpful'],
   word: '',
-  winElement: document.getElementById("wins"),
-  attempsElement: document.getElementById("attempts"),
+  winElement: document.getElementById('wins'),
+  attempsElement: document.getElementById('attempts'),
   keyPressArray: [],
-  keyPressLocation: document.getElementById("keyArray"),
+  keyPressLocation: document.getElementById('keyArray'),
   wins: 0,
   hasWon: false,
   attempts: 10,
   //Create a placeholder with blanks where letters will be placed
   createPlaceholderForWord: (word) => {
-    let target = document.getElementById("target");
+    let target = document.getElementById('target');
     while (target.firstChild) {
       target.removeChild(target.firstChild);
     }
     for (let i = 0; i < word.length; i++) {
-      let node = document.createElement("span");
-      let textnode = document.createTextNode(" _ ");
+      let node = document.createElement('span');
+      let textnode = document.createTextNode(' _ ');
       node.appendChild(textnode);
-      node.setAttribute("id", `letter${i}`);
+      node.setAttribute('id', `letter${i}`);
       target.appendChild(node);
     }
     game.winElement.innerText = game.wins;
@@ -51,7 +52,7 @@ let game = {
   keepTrackofLetterUsed: (keyPressed) => {
     game.keyPressArray.push(keyPressed);
     const keyPressLocation = game.keyPressLocation;
-    let node = document.createElement("span");
+    let node = document.createElement('span');
     let textnode = document.createTextNode(keyPressed);
     node.appendChild(textnode);
     keyPressLocation.appendChild(node);
@@ -103,8 +104,8 @@ document.onkeypress = ((event) => {
   let keyPressed = event.key.toLowerCase();
   if (game.attempts === 0) {
     let keyPressLocation = game.keyPressLocation;
-    keyPressLocation.innerText = "Game Over !! Press Enter";
-    if (keyPressed === "enter") {
+    keyPressLocation.innerText = 'Game Over !! Press Enter';
+    if (keyPressed === 'enter') {
       game.reset();
     }
   } else {
